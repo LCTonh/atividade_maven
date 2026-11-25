@@ -13,8 +13,9 @@
     <div class="container">
         <strong>MVC Aula</strong>
         <nav>
-            <span>${usuarioLogado.nome} (${usuarioLogado.perfil.nome})</span>
-            <a href="${pageContext.request.contextPath}/logout">Sair</a>
+            <a href="${pageContext.request.contextPath}/home">Home</a>
+            <a href="${pageContext.request.contextPath}/cafes">Cafes</a>
+            <a href="${pageContext.request.contextPath}/reviews">Reviews</a>
         </nav>
     </div>
 </header>

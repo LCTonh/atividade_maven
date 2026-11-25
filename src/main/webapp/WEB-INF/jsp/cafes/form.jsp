@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         <c:choose>
-            <c:when test="${empty cafe.id}">Novo perfil</c:when>
-            <c:otherwise>Editar perfil</c:otherwise>
+            <c:when test="${empty cafe.id}">Novo cafe</c:when>
+            <c:otherwise>Editar cafe</c:otherwise>
         </c:choose>
         - MVC Aula
     </title>
@@ -21,7 +21,7 @@
         <nav>
             <a href="${pageContext.request.contextPath}/home">Home</a>
             <a href="${pageContext.request.contextPath}/cafes">Cafes</a>
-            <a href="${pageContext.request.contextPath}/reviews">Reviews</a>\
+            <a href="${pageContext.request.contextPath}/reviews">Reviews</a>
         </nav>
     </div>
 </header>
@@ -56,13 +56,13 @@
             </div>
 
             <div class="form-group">
-                <label for="endereco">Bairro</label>
-                <input type="text" id="endereco" name="endereco" value="${cafe.bairro}">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" name="bairro" value="${cafe.bairro}">
             </div>
 
             <div class="form-group">
-                <label for="tipo_cafe_principal">Cafe principal</label>
-                <input type="text" id="tipo_cafe_principal" name="tipo_cafe_principal" value="${cafe.tipo_cafe_principal}">
+                <label for="cafePrincipal">Cafe principal</label>
+                <input type="text" id="cafePrincipal" name="cafePrincipal" value="${cafe.cafePrincipal}">
             </div>
 
             <div class="actions">

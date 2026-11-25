@@ -23,6 +23,10 @@ public class CafeService {
         return this.cafeDAO.listarTodos();
     }
 
+    public List<Long> listarIds() {
+        return this.cafeDAO.listarIds();
+    }
+
     public Cafe buscarPorId(Long id) {
         if (id == null) {
             return null;

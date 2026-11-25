@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class MysqlSingleton {
 
     private static final String URL =
-            "jdbc:mysql://mysql:3306/mvc_java?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
+            "jdbc:mysql://127.0.0.1:3306/mvc_java?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USER = "mvc_user";
     private static final String PASSWORD = "mvc123";
 

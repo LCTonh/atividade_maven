@@ -32,6 +32,19 @@ public class CafeDAO extends MysqlDAO {
         return lista;
     }
 
+    public List<Long> listarIds() {
+        String sql = "SELECT id FROM cafes ORDER BY id";
+        List<Long> lista = new ArrayList<>();
+        try (ResultSet rs = super.executar(sql)) {
+            while (rs.next()) {
+                lista.add(rs.getLong("id"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao listar ids de cafes.", e);
+        }
+        return lista;
+    }
+
     public Cafe buscarPorId(Long id) {
         String sql = "SELECT id, nome, endereco, bairro, tipo_cafe_principal FROM cafes WHERE id = ?";
         try (ResultSet rs = super.executar(sql, id)) {
@@ -66,9 +79,9 @@ public class CafeDAO extends MysqlDAO {
     }
 
     public void alterar(Cafe cafe) {
-        String sql = "UPDATE cafes SET nome = ? WHERE id = ?";
+        String sql = "UPDATE cafes SET nome = ?, endereco = ?, bairro = ?, tipo_cafe_principal = ? WHERE id = ?";
         try {
-            super.executarUpdate(sql, cafe.getNome(), cafe.getId());
+            super.executarUpdate(sql, cafe.getNome(), cafe.getEndereco(), cafe.getBairro(), cafe.getCafePrincipal(), cafe.getId());
         } catch (SQLException e) {
             throw new RuntimeException("Erro ao alterar cafe.", e);
         }

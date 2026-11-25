@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perfis - MVC Aula</title>
+    <title>Cafes - MVC Aula</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilo.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
         <nav>
             <a href="${pageContext.request.contextPath}/home">Home</a>
             <a href="${pageContext.request.contextPath}/cafes">Cafes</a>
-            <a href="${pageContext.request.contextPath}/reviews">Reviews</a>\
+            <a href="${pageContext.request.contextPath}/reviews">Reviews</a>
         </nav>
     </div>
 </header>
@@ -54,11 +54,11 @@
                             <td>${cafe.nome}</td>
                             <td>${cafe.endereco}</td>
                             <td>${cafe.bairro}</td>
-                            <td>${cafe.tipo_cafe_principal}</td>
+                            <td>${cafe.cafePrincipal}</td>
                             <td class="links">
-                                <a href="${pageContext.request.contextPath}/perfis?acao=editar&id=${cafe.id}">Editar</a>
-                                <a href="${pageContext.request.contextPath}/perfis?acao=excluir&id=${cafe.id}"
-                                    onclick="return confirm('Excluir este perfil?');">Excluir</a>
+                                <a href="${pageContext.request.contextPath}/cafes?acao=editar&id=${cafe.id}">Editar</a>
+                                <a href="${pageContext.request.contextPath}/cafes?acao=excluir&id=${cafe.id}"
+                                    onclick="return confirm('Excluir este cafe?');">Excluir</a>
                             </td>
                         </tr>
                     </c:forEach>

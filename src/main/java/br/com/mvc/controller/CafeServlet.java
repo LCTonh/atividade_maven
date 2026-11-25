@@ -13,7 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
  * Controller de Cafe.
  * Ponte entre rota, service e view — sem regra de negocio.
  */
-@WebServlet("/cafes")
+@WebServlet("/cafes/*")
 public class CafeServlet extends BaseServlet {
 
     private static final String LISTA = "/WEB-INF/jsp/cafes/lista.jsp";
@@ -80,7 +80,7 @@ public class CafeServlet extends BaseServlet {
         cafe.setNome(this.param(req, "nome"));
         cafe.setEndereco(this.param(req, "endereco"));
         cafe.setBairro(this.param(req, "bairro"));
-        cafe.setCafePrincipal(this.param(req, "cafe_principal"));
+        cafe.setCafePrincipal(this.param(req, "cafePrincipal"));
         return cafe;
     }
 }

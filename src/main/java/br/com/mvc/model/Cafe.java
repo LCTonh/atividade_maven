@@ -1,12 +1,11 @@
 package br.com.mvc.model;
 
 public class Cafe {
-
     private Long id;
     private String nome;
     private String endereco;
     private String bairro;
-    private String tipo_cafe_principal;
+    private String cafePrincipal;
 
     public Long getId() {
         return id;
@@ -41,10 +40,10 @@ public class Cafe {
     }
 
     public String getCafePrincipal() {
-        return tipo_cafe_principal;
+        return cafePrincipal;
     }
 
-    public void setCafePrincipal(String tipo_cafe_principal) {
-        this.tipo_cafe_principal = tipo_cafe_principal;
+    public void setCafePrincipal(String cafePrincipal) {
+        this.cafePrincipal = cafePrincipal;
     }
 }
