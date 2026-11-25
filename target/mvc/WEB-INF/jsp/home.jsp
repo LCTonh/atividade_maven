@@ -25,13 +25,13 @@
     </div>
 
     <div class="grid-cards">
-        <a class="menu-card" href="${pageContext.request.contextPath}/usuarios">
-            <strong>Usuarios</strong>
-            <span>Listar, cadastrar, editar e excluir usuarios.</span>
+        <a class="menu-card" href="${pageContext.request.contextPath}/cafes">
+            <strong>Cafes</strong>
+            <span>Listar, cadastrar, editar e excluir cafes.</span>
         </a>
-        <a class="menu-card" href="${pageContext.request.contextPath}/perfis">
-            <strong>Perfis</strong>
-            <span>Listar, cadastrar, editar e excluir perfis.</span>
+        <a class="menu-card" href="${pageContext.request.contextPath}/reviews">
+            <strong>Reviews</strong>
+            <span>Listar, cadastrar, editar e excluir reviews.</span>
         </a>
     </div>
 </main>
