@@ -87,7 +87,12 @@ public class ReviewServlet extends BaseServlet {
         review.setNotaAmbiente(this.paramLong(req, "notaAmbiente"));
         review.setNotaAtendimento(this.paramLong(req, "notaAtendimento"));
         review.setComentario(this.param(req, "comentario"));
-        review.setCriadoEm(LocalDateTime.parse(req.getParameter("criadoEm")));
+        String dataForm = req.getParameter("criadoEm");
+        if (dataForm != null && !dataForm.isBlank()) {
+            review.setCriadoEm(LocalDateTime.parse(dataForm));
+        } else {
+            review.setCriadoEm(LocalDateTime.now()); // Usa data/hora atual como padrão
+        }
         return review;
     }
 }
